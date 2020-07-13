@@ -33,13 +33,15 @@ export class MyCounter {
     );
   }
 }`, {
-    file: 'index.tsx',
-    module: 'cjs',
-    // script: 'es5',
-    style: 'import',
-    // componentMetadata: 'compilerstatic'
+  file: 'index.tsx',
+  module: 'cjs',
+  // script: 'es5',
+  style: 'import',
+  // componentMetadata: 'compilerstatic'
 }, null).then(results => {
-    const errors = results.diagnostics[0];
+  const error = results.diagnostics[0];
+
+  console.log(error);
 
 
 })
